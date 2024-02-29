@@ -1,0 +1,76 @@
+.divs{
+  /* margin-top: -5px; */
+  /* margin-top: 20px; */
+    border:rgb(255, 166, 0)  solid 1px;
+    width:75px;
+    height: 75px;
+    display: inline-block;
+    background-color: rgb(251, 252, 254);
+    opacity: 87%;
+    /* margin-top: 30px; */
+    /* display: inline-block; */
+    border-radius: 0.25em;
+    
+   
+    }
+    body{
+    text-align: center;
+    /* background-image: url("asd.gif");
+    background-repeat: no-repeat;
+    background-size: auto;  */
+  /* background-position: right top; 
+  /* /* background-attachment: fixed;   */
+    }
+    #x{ 
+        width: 75px;
+        height: 75px;
+    }
+#q{
+  width: 75px;
+  height: 75px;
+}
+/* #abc{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(244, 238, 57);
+
+}
+#board{
+  width: 100px;
+  height: 100px; 
+  width: 45%;
+  background-color: rgb(209, 247, 94);
+  margin-left: 25%;
+  opacity: 70%;
+
+}  
+/* #d1{
+  font-size:xx-large ;
+  display:flex;
+  flex-direction: column;
+  /* margin-left: 300px;
+  margin-top: 250px; */
+  /* background-color: rgb(79, 77, 77);
+border-bottom-left-radius: 1.25em;
+border-bottom-right-radius: 1.25em;
+color: rgb(113, 107, 107);
+display: grid;
+gap: 0.875em;
+opacity: 60%;
+padding: 1.25em 1.625em;
+box-shadow: 1px 6px 15px rgb(0, 0, 0);
+} */ 
+#p1{
+  font-size: 50px;
+}
+#p2{
+  font-size: 40px;
+}
+/* #p2{
+  font-size: 25px;
+} */
+
+
+
+
+

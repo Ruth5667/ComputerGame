@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="contacts.js"></script>
+    <style>
+        .class1{
+            border: 1px solid red;
+        }
+        body{
+            background-repeat: no-repeat;
+             background-image:url("pictures/רקעעע.jpg");
+             background-size:  100%;
+             background-position-x: 100%;
+            background-position-y: 15%;
+        }
+        #for{
+            margin-left: 30vh;
+            margin-right: 30vh;
+            opacity: 70%;
+        }
+        #form1{
+            /* opacity: 50%; */
+            background-color: aliceblue;
+        }
+        #login{
+            background-color: #b8c4a9;
+    border-top-left-radius: 1.20em;
+    border-top-right-radius: 1.20em;
+    color: #fff;
+    padding: 1.25em 1.625em;
+    box-shadow: -2px 0px 15px rgb(0, 0, 0);
+        }
+        img{
+            width: 6%;
+            height: 6%;
+        }
+        #myForm{
+            font-size:xx-large ;
+            display:flex;
+            flex-direction: column;
+            /* margin-left: 300px;
+            margin-top: 250px; */
+            background-color: #fff;
+    border-bottom-left-radius: 1.25em;
+    border-bottom-right-radius: 1.25em;
+    color: #777;
+    display: grid;
+    gap: 0.875em;
+    padding: 1.25em 1.625em;
+    box-shadow: 1px 6px 15px rgb(0, 0, 0);
+        }
+        input{
+           font-size:medium;
+           text-align: center;
+           margin: 5px;
+           margin-left: 15%;
+           /* text-align: center; */
+        }
+        
+        span{
+            width: 3%;
+            height: 3%;
+        }
+        #span1{
+            margin-left: 25px;
+        }
+        #sub1{
+            color: rgb(15, 15, 15);
+            background-color: rgb(78, 220, 12);
+        }
+        /* input {
+    background-image: none;
+    border: none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s;
+} */
+    </style>
+</head>
+<body>
+   
+   <div id="for">
+    
+          <div id="form1">
+ <div id="login">
+    <span id="span1"><img src="pictures/כדור א.png"></span>
+    <span><img src="pictures/כדור ב.png"></span>
+    <span><img src="pictures/כדור ג.png"></span>
+    <span><img src="pictures/כדור ב.png"></span>
+    <span><img src="pictures/כדור ג.png"></span>
+    <span><img src="pictures/כדור א.png"></span>
+    <span><img src="pictures/כדור ב.png"></span>
+    <span><img src="pictures/כדור ג.png"></span>
+    <span><img src="pictures/כדור ג.png"></span>
+    <span><img src="pictures/כדור א.png"></span>
+    <span><img src="pictures/כדור ב.png"></span>
+    <span><img src="pictures/כדור ג.png"></span>
+    <span><img src="pictures/כדור א.png"></span>
+    <span><img src="pictures/כדור ב.png"></span>
+    <span><img src="pictures/כדור ג.png"></span>
+ </div>
+</div>
+<form id="myForm">
+    <div>
+        <label for="name">User Name</label>
+        <input type="text" name="name" placeholder="Name" required onfocus="func1()">
+        <br>
+        </div>
+        <div>
+            <label for="email">E-mail Adress</label>
+        <input type="email" name="email" placeholder="E-mail" >
+        <br>
+        </div>
+        <div>
+            <label for="number">Phone-Number</label>
+        <input type="number" name="number" placeholder="Phone-Number">
+        <br>
+        </div>
+        <div>
+            <label for="password">Password</label>
+        <input type="password" name="password" required placeholder="Password">
+        <br>
+      </div>
+        <input  type="submit" id="sub1" value="Send"  onclick="homePage()">
+        <!-- onclick="addContact()"> -->
+  </div> 
+ </form>
+ </div>
+ 
+ <script>
+  function  func1(){
+    document.querySelector("input").classList.add("class1")
+  }
+            // Add event listener to form submit event
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get form data
+            let formData = new FormData(this);
+            
+            // Convert form data to JSON object
+            let jsonObject = {};
+            formData.forEach(function(value, key) {
+                jsonObject[key] = value;
+            });
+            
+            // Convert JSON object to JSON string
+            //let jsonString = JSON.stringify(jsonObject);
+            // localStorage.setItem(jsonString);
+            
+        
+        localStorage.setItem('formData', JSON.stringify(jsonObject));
+       
+            console.log(jsonObject);
+ this.reset();
+ 
+ 
+//window.location.href = 'trial.html';
+
+});
+function homePage(){
+    window.location.href='homeProject.html';
+}
+func();
+</script>
+<!-- <table id="table">
+    <thead>
+        <tr id="table-header"></tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+</table> -->
+</body>
+</html>
